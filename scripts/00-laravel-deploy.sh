@@ -4,8 +4,7 @@ composer global require hirak/prestissimo
 composer install --no-dev --working-dir=/var/www/html
 
 echo "vite"
-curl -sL https://deb.nodesource.com/setup_18.x | bash -
-apt-get install -y nodejs
+npm install
 npm run build
 
 echo "Caching config..."
