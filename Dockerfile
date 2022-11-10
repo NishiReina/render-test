@@ -21,7 +21,14 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 
 # npm command install
 
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
-RUN apt-get install -y nodejs
+RUN apt update
+RUN apt install -y wget git unzip libpq-dev
+
+RUN apt install -y npm \
+  && npm install n -g \
+  && n 16
+
+# RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+# RUN apt-get install -y nodejs
 
 CMD ["/start.sh"]
