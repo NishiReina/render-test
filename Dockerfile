@@ -21,8 +21,8 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 
 # npm command install
 
-RUN apt update
-RUN apt install -y wget git unzip libpq-dev
+# RUN apt update
+# RUN apt install -y wget git unzip libpq-dev
 
 RUN apt install -y npm \
   && npm install n -g \
