@@ -6,6 +6,7 @@ composer install --no-dev --working-dir=/var/www/html
 echo "vite"
 npm install
 npm run build
+npm run dev
 
 echo "Caching config..."
 php artisan config:cache
