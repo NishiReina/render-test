@@ -1,7 +1,7 @@
-FROM node:16-slim as node-builder
+# FROM node:16-slim as node-builder
 
-COPY . ./app
-RUN cd /app && npm ci && npm run prod
+# COPY . ./app
+# RUN cd /app && npm ci && npm run prod
 
 
 # richarvey/nginx-php-fpmをベースとする
@@ -12,7 +12,7 @@ COPY . .
 # Image config
 ENV SKIP_COMPOSER 1
 ENV WEBROOT /var/www/html/public
-ENV PHP_ERRORS_STDERR 1
+ENV PHP_ERRORS_STDERR 1n
 ENV RUN_SCRIPTS 1
 ENV REAL_IP_HEADER 1
 
@@ -26,6 +26,8 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 
 
 # npm command install
+
+RUN apk add --update nodejs npm
 
 # RUN apt update
 # RUN apt install -y wget git unzip libpq-dev
