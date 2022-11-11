@@ -32,7 +32,6 @@ RUN apk add --update nodejs npm
 RUN echo npm -v
 RUN npm install
 RUN npm run build
-RUN npm run dev
 
 # RUN apt update
 # RUN apt install -y wget git unzip libpq-dev
