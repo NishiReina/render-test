@@ -29,6 +29,8 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 
 RUN apk add --update nodejs npm
 
+RUN echo npm -v
+
 # RUN apt update
 # RUN apt install -y wget git unzip libpq-dev
 
