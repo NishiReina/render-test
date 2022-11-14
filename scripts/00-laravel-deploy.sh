@@ -19,6 +19,9 @@ php artisan cache:clear
 echo "Caching view..."
 php artisan view:clear
 
+echo "symbolic link"
+php artisan storage:link
+
 echo "Running migrations..."
 php artisan migrate --force
 
