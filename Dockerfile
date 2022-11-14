@@ -27,7 +27,7 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 
 # npm command install
 
-RUN apk add --update nodejs npm
+# RUN apk add --update nodejs npm
 
 # RUN echo npm -v
 # RUN npm install
