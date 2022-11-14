@@ -13,6 +13,12 @@ php artisan config:cache
 echo "Caching routes..."
 php artisan route:cache
 
+echo "Caching cache..."
+php artisan cache:clear
+
+echo "Caching view..."
+php artisan view:clear
+
 echo "Running migrations..."
 php artisan migrate --force
 
